@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '!p(4jrp1o&bdcx=i4nsnnx4orvexma6giu*a*+2d3tqfe$(1#h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -131,7 +132,6 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'users:login'
 
 # Heroku Settings
-import os
 import django_heroku
 django_heroku.settings(locals())
 
