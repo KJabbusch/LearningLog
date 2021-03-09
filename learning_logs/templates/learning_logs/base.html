@@ -1,0 +1,15 @@
+<p>
+    <h1><center><a href="{% url 'learning_logs:index' %}">Learning Log</a></center></h1>
+    <center><a href="{% url 'learning_logs:topics' %}">Topics</a> 
+    <br><br>
+    {% if user.is_authenticated %}
+      Hello, {{ user.username  }}. 
+      <small><a href="{% url 'users:logout' %}">(Log out)</a></small>
+    {% else %}
+      <a href="{% url 'users:register'%}">Register</a> | 
+      <a href="{% url 'users:login' %}">Log in</a>
+    {% endif %}
+          
+</p></center>
+
+{% block content %}{% endblock content %}
